@@ -1,0 +1,284 @@
+@import "vars"
+@import "most"
+@import "offer"
+@import "anim"
+
+
+.stars
+  background-image: url(../../img/stars.png)
+  background-size: contain
+.sect__top
+  background-color: #fff
+  z-index: -1
+  &.blue
+    background-color: $blue
+// ========================>
+// header
+// <=======================
+.header
+  position: relative
+  padding: .4rem 0
+.logo
+  margin: 0
+  text-align: center
+  color: $accent
+  font-size: 0.68rem
+  letter-spacing: 0.0272rem
+  margin-bottom: 0.25rem
+  line-height: 1
+.header__subtitle
+  font-size: 0.2rem
+  color: #443e7c
+  text-align: center
+  margin-bottom: 0.26rem
+.price
+  width: 2.5rem
+  height: 0.72rem
+  margin: auto
+  border: 2px solid $accent
+  border-radius: 40px
+  text-align: center
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  z-index: 1
+  position: relative
+  &--header
+    margin-top: -.7rem
+  p
+    margin: 0
+.price__old
+  color: #ffc698
+  font-size: 0.16rem
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    background-color: #ffc698
+    top: .12rem
+    left: 0
+    height: 0.02rem
+    transform: rotate(5deg)
+.price__new
+  font-size: 0.22rem
+  color: #fc7000
+.header__decor1
+  position: absolute
+  width: 0.83rem
+  height: 0.54rem
+  top: 0.9rem
+  left: 0
+.header__decor2
+  position: absolute
+  width: 0.67rem
+  height: 2.1rem
+  top: 4.6rem
+  right: 0
+
+.header__sale-title
+  text-align: center
+  color: #443e7c
+  margin-top: 0.3rem
+  span
+    font-weight: bold
+    font-size: 0.2rem
+
+.timer
+  background-color: #443e7c
+  width: 2.6rem
+  height: 1rem
+  border-radius: 10px
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: space-around
+  padding: 0 .35rem
+  color: #fff
+  box-sizing: border-box
+
+.timer__item
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 33%
+  .time
+    font-size: 0.4rem
+    line-height: 0.39rem
+    display: flex
+    justify-content: center
+  .desc
+    font-size: 0.12rem
+    font-weight: 300
+    line-height: 0.9
+.header__builets
+  padding: 0.4rem 0
+.header__item
+  display: flex
+  align-items: center
+  margin: 0
+    bottom: 0.2rem
+  img
+    width: .25rem
+    height: 0.25rem
+    margin-right: 0.25rem
+    flex-shrink: 0
+  &:nth-child(even)
+    img
+      transform: rotate(24deg)
+  &:nth-child(3)
+    img
+      transform: rotate(-24deg)
+  &:nth-child(4)
+    img
+      transform: rotate(34deg)
+
+
+.sect2__decor
+  position: absolute
+  width: 0.75rem
+  height: 0.9rem
+  top: 0.7rem
+  right: 0
+.sect2
+  background-color: $blue
+  position: relative
+  color: #fff
+  padding-bottom: 0.5rem
+  .img-wrap
+    padding-right: 0.15rem
+
+
+.sect3__dec
+  position: absolute
+  top: 1.7rem
+  left: 0
+  width: 0.65rem
+  height: 0.68rem
+  z-index: 2
+.sect3
+  position: relative
+.sect3__top
+  margin-top: -1.05rem
+  background: #fff
+  position: relative
+.sect3__content
+  padding: 0 .1rem
+  p
+    padding-left: 0.33rem
+    padding-right: 0.4rem
+    color: #443e7c
+    margin-bottom: 0.6rem
+.sect3__item
+  position: relative
+
+img.sect3__dec2
+  position: absolute
+  width: .67rem
+  height: 1.7rem
+  position: absolute
+  right: -.1rem
+  bottom: -1.2rem
+img.sect3__dec3
+  position: absolute
+  right: -0.1rem
+  bottom: -.7rem
+  width: 1.1rem
+  height: 0.8rem
+
+.sect4
+  background-color: $blue
+  color: #fff
+  padding-bottom: 0.5rem
+.sect4__content
+  padding: 0 .33rem
+.sect4__item
+  span
+    font-weight: bold
+    color: $accent-l
+    display: block
+    margin-bottom: 0.2rem
+  img
+    margin: auto
+    text-align: center
+    display: block
+    margin-bottom: 0.2rem
+
+.sect5
+  background-color: #fff
+  position: relative
+  z-index: 1
+  margin-bottom: -1.2rem
+.sect5__top
+  position: relative
+.sect5__dec
+  position: absolute
+  top: 2.4rem
+  right: 0
+  width: 0.8rem
+  height: 0.84rem
+  z-index: 1 
+
+.sect5__review
+  display: flex
+  align-items: center
+  justify-content: center
+
+.sect5__btn
+  width: 3.1rem
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $accent
+  height: 0.68rem
+  margin: auto
+  border: 2px solid $accent
+  font-size: .19rem
+  border-radius: 40px
+  text-decoration: none
+  text-transform: uppercase
+  margin: .4rem auto
+
+.sect5_bot
+  width: 1.14rem
+  margin-left: auto
+  margin-right: 0.35rem
+
+.sect6
+  position: relative
+  background-color: $blue 
+  h2
+    padding-top: 0
+.sect6__top
+  background-color: $blue
+  margin-top: -0.2rem
+  position: relative
+
+.sect6__content
+  padding: 0 .33rem
+
+.sect6__item
+  display: flex
+  align-items: center
+  margin-bottom: 0.45rem
+  color: #fff
+  &:last-child
+    margin-bottom: 0
+  img
+    flex-shrink: 0
+    width: 1.14rem
+    margin-right: 0.3rem
+  a
+    font-weight: bold
+    color: $accent-l
+  .socials
+    display: flex
+    justify-content: flex-start
+    padding-top: 0.15rem
+    a
+      display: block
+    img
+      width: 0.4rem
+    
