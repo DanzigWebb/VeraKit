@@ -41,22 +41,32 @@ var swiper = new Swiper('.swiper-container', {
 // ========================>
 // validate input
 // <=======================
-// (function () {
-//   var input = document.querySelector('input[name="name"]');
-//   input.addEventListener('input', function () {
-//     input.value = input.value.replace(/[0-9]/g, '')
-//   })
-// })();
+(function () {
+  var input = document.querySelector('input[name="name"]');
+  input.addEventListener('input', function () {
+    input.value = input.value.replace(/[0-9]/g, '')
+  })
+})();
 // ========================>
 // pulse btn
 // <=======================
-// (function () {
-//   var offer = document.getElementById('offer');
-//   var btn = document.querySelector('.pulse__btn');
-//   window.addEventListener('scroll', (e) => {
-//     document.documentElement.scrollTop + 300 > offer.offsetTop ? btn.classList.add('show') : btn.classList.remove('show')
-//   })
-// })();
+(function () {
+  var offer = document.getElementById('offer');
+  var btn = document.querySelector('.pulse__btn');
+  window.addEventListener('scroll', (e) => {
+    document.documentElement.scrollTop + 300 > offer.offsetTop ? btn.classList.add('show') : btn.classList.remove('show')
+  })
+})();
+// ========================>
+// active check
+// <=======================
+(function() {
+  document.querySelectorAll('.sect7__item').forEach(checkBox => {
+    checkBox.addEventListener('click', function() {
+      this.classList.toggle('active')
+    })
+  });
+})()
 // ========================>
 // timer
 // <=======================

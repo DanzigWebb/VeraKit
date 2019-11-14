@@ -16,24 +16,27 @@ input[type=number]::-webkit-outer-spin-button
   margin: 0
 
 input
-  height: .78rem
+  height: .68rem
   width: 100%
-  border-radius: 10px
-  background-color: #f7f7fd
+  border-radius: 40px
+  background-color: #fff
   padding-left: 0.3rem
   box-sizing: border-box
-  border: none
-  box-shadow: inset 0px 3px 2px 1px rgba(182, 170, 170, 0.54)
+  border: 2px solid #443e7c
+  box-shadow: 0 0 11px 2px rgba(76, 67, 159, 0.22)
   font-size: 0.16rem
-.input-wrap
+  font-weight: 700
+  color: $blue
   position: relative
-  margin-bottom: 0.3rem
-  img
-    position: absolute
-    right: 0.3rem
-    top: 50%
-    transform: translateY(-50%)
-
+  padding-left: 0.8rem
+input::-webkit-input-placeholder  
+  color: $blue
+input:-ms-input-placeholder  
+  color: $blue
+input::-ms-input-placeholder  
+  color: $blue
+input::placeholder  
+  color: $blue
 // ========================>
 // policy
 // <=======================
@@ -44,10 +47,25 @@ input
   justify-content: center
   flex-direction: column
   min-height: 1rem
-  background-color: #3b3c3d
+  background-color: $blue
   font-size: 0.16rem
   color: #fff
   text-align: center
-  margin-top: 0.4rem
   a
     color: $accent
+
+form
+  width: 3.1rem
+  margin: auto
+  padding-bottom: 1rem
+  position: relative
+.input__wrap
+  position: relative
+  margin-bottom: 0.4rem
+  img
+    position: absolute
+    left: 0.3rem
+    top: 0
+    height: 100%
+    width: 0.4rem
+    z-index: 1

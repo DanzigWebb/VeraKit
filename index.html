@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>VERAKIT</title>
 	<meta property="og:image" content="path/to/image.jpg">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<meta name="theme-color" content="#000">
@@ -18,9 +18,9 @@
 </head>
 
 <body>
-	<!-- <a href="#offer" class="pulse__btn">
+	<a href="#offer" class="pulse__btn">
 		<img src="img/button.png" alt="">
-	</a> -->
+	</a>
 	<header class="header stars">
 		<div class="header__decor1"><img src="img/head_dec.png" alt=""></div>
 		<div class="header__decor2"><img src="img/head_dec2.png" alt=""></div>
@@ -243,14 +243,88 @@
 			уже с рождения!</div>
 		<div class="sect7__price cursive">990₽ за 1 шт</div>
 
-		<div class="sect__content">
-			(.sect__item>img[src="img/prod$.png"]+p.sect7__title{sss}+span{aaa})*7
+		<div class="sect7__content">
+			<div class="sect7__item">
+				<img src="img/prod1.png" alt="">
+				<p class="sect7__title">Джунгли <br>
+					от VeraKit</p>
+				<span>Лев, Слон, <br>
+					Змея, Зебра, <br>
+					Обезьяна, Попугай</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod2.png" alt="">
+				<p class="sect7__title">Море <br>
+					от VeraKit</p>
+				<span>Морской конек, <br>
+					Дельфин, Скаты, <br>
+					Краб, Рыбка, <br>
+					Осьминог</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod3.png" alt="">
+				<p class="sect7__title">Сафари <br>
+					от VeraKit</p>
+				<span>Бегемот, Крокодил, <br>
+					Фламинго, Леопард <br>
+					Жираф, Антилопа</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod4.png" alt="">
+				<p class="sect7__title">Север <br>
+					от VeraKit</p>
+				<span>Пингвин, Песец, <br>
+					Белый медведь, Тюлень, Косатка, <br>
+					Альбатрос</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod5.png" alt="">
+				<p class="sect7__title">Ферма <br>
+					от VeraKit</p>
+				<span>Корова, Барашек, <br>
+					Лошадь, Курица, <br>
+					Коза, Поросенок</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod6.png" alt="">
+				<p class="sect7__title">Лес <br>
+					от VeraKit</p>
+				<span>Енот, Сова, <br>
+					Ежик, Медведь, <br>
+					Олень, Лиса</span>
+			</div>
+			<div class="sect7__item">
+				<img src="img/prod7.png" alt="">
+				<div class="sect__item-content">
+					<p class="sect7__title">Домашние <br>
+						Животные <br>
+						от VeraKit</p>
+					<span>Кошка, Собака, <br>
+						Заяц, Рыбка, <br>
+						Хомяк, Черепаха</span>
+				</div>
+			</div>
 		</div>
+
+
 	</section>
-	<!-- <div class="policy__bot">
+	<form id="offer" class="stars" action="">
+		<img src="img/form_decor.png" alt="" class="form__decor">
+		<div class="input__wrap">
+			<img src="img/phone.png" alt="">
+
+			<input type="text" required="" name="name" placeholder="Введите ваше имя">
+		</div>
+		<div class="input__wrap">
+			<img src="img/man.png" alt="">
+			<input type="number" required="" name="phone" placeholder="Введите ваш телефон">
+		</div>
+		<button class="btn" type="submit">ЗАКАЗАТЬ</button>
+	</form>
+	<div class="policy__bot">
 		<span>GADGET SHOP, Calle de Boldano, 33, 28027 Madrid, Span</span>
 		<a href="/privacypolicy" target="_blank">Политика конфиденциальности</a>
-	</div> -->
+	</div>
 	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<script src="libs/swiper/swiper.min.js"></script>
 	<script src="js/common.js"></script>
