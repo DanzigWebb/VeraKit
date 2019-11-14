@@ -1,16 +1,4 @@
 // ========================>
-// slider for reviews
-// <=======================
-var swiper = new Swiper('.swiper-container', {
-  pagination: {
-    el: '.reviews__pag',
-    clickable: true,
-  },
-  // loop: true,
-  autoHeight: true,
-  spaceBetween: 40
-});
-// ========================>
 // animation scroll
 // <=======================
 (function () {
