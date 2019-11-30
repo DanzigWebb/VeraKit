@@ -59,37 +59,51 @@
 // timer
 // <=======================
 class minTimer {
-  constructor(hour, min, sec) {
-    this.hour = document.querySelectorAll(`.${hour}`);
-    this.min = document.querySelectorAll(`.${min}`);
-    this.sec = document.querySelectorAll(`.${sec}`);
+  constructor(options) {
+    this.hour = document.querySelectorAll(`.${options.hour}`);
+    this.min = document.querySelectorAll(`.${options.min}`);
+    this.sec = document.querySelectorAll(`.${options.sec}`);
+    this.separation = options.separation
   }
   start() {
-    // время таймера
-    let timerPar = {
-      hour: 23,
-      min: 55,
-      sec: 26,
+    const update = () => {
+      let date = new Date
+      let tz = date.getTimezoneOffset()
+      let now = Math.floor(date / 1000 - tz * 60)
+      let next = Math.ceil((date / 1000 / 60 - tz) / 60 / 24) * 60 * 60 * 24
+      let left = next - now;
+
+      let hourString = ("0" + ~~(left / 60 / 60)).slice(-2)
+      let minString = ("0" + ~~(left / 60 % 60)).slice(-2)
+      let secString = ("0" + ~~(left % 60)).slice(-2)
+      // каждая цифра в отдельном элементе
+      const separation = () => {
+        for (let i = 0; i < this.min.length; i++) {
+          this.hour[i].innerHTML = `<span>${hourString[0]}</span><span>${hourString[1]}</span>`
+          this.min[i].innerHTML = `<span>${minString[0]}</span><span>${minString[1]}</span>`
+          this.sec[i].innerHTML = `<span>${secString[0]}</span><span>${secString[1]}</span>`
+        }
+      }
+      // цифры вместе
+      const together = () => {
+        for (let i = 0; i < this.min.length; i++) {
+          this.hour[i].innerHTML = hourString
+          this.min[i].innerHTML = minString
+          this.sec[i].innerHTML = secString
+        }
+      }
+
+      this.separation ? separation() : together()
     }
+
     setInterval(() => {
-      for (let i = 0; i < this.min.length; i++) {
-        let hourString = ("0" + timerPar.hour).slice(-2)
-        let minString = ("0" + timerPar.min).slice(-2)
-        let secString = ("0" + timerPar.sec).slice(-2)
-        this.hour[i].innerHTML = `<span>${hourString[0]}</span><span>${hourString[1]}</span>`
-        this.min[i].innerHTML = `<span>${minString[0]}</span><span>${minString[1]}</span>`
-        this.sec[i].innerHTML = `<span>${secString[0]}</span><span>${secString[1]}</span>`
-      }
-      timerPar.sec--;
-      if (timerPar.sec == -1) {
-        timerPar.sec = 59;
-        timerPar.min--
-      };
-      if (timerPar.min == -1) {
-        timerPar.min = 59;
-        timerPar.hour--
-      }
+      update()
     }, 1000);
   }
 }
-const timer = new minTimer('hour', 'min', 'sec').start();
+const timer = new minTimer({
+  hour: 'hour',
+  min: 'min',
+  sec: 'sec',
+  separation: true
+}).start();
